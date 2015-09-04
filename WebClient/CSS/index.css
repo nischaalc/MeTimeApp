@@ -1,0 +1,115 @@
+html {
+    background: url(../img/photo-1425036458755-dc303a604201.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#intro {
+    text-align: center;
+    font-size: 3rem;
+    margin: 4rem 0 2rem 0;
+}
+
+#top {
+    padding-bottom: 1rem; 
+    height: 2rem;
+    padding: 1rem 1rem 0 1rem;
+    line-height: 38px;
+}
+
+#top a {
+    border-radius: 8px;
+    background-color: white;
+    text-decoration: none;
+    color: #19323C;
+    padding: 0.8rem;
+    font-weight: bold;
+}
+
+#main-content {
+    position: relative;
+    top: 10rem;
+}
+
+#welcome {
+    margin: 2rem;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+#flavor {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#toplayer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#signup {
+    text-align: center;
+    z-index: 1
+}
+
+#signcontainer {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 450px;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.join {
+    font-size: 2rem;
+    color: #19323C;
+}
+
+#googleIn {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#wrapper {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.member {
+    text-decoration: none;
+    color: #19323C;
+    font-weight: bold;
+}
+
+#foot {
+    color: white;
+    opacity: 0.6;
+    text-align: center;
+    width:100%;
+	position:absolute;
+	bottom:5px;
+	left:0;
+}
+
+#info {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.info-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.google-auth {
+    margin-left: 50%;
+    display: block;
+}

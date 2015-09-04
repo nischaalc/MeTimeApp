@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>MeTime</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/fullcalendar.min.css"/>
+    <link rel="stylesheet" href="CSS/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="CSS/toastr.min.css"/>
+    
+    <!-- JavaScript -->
+    <script src="JS/jquery-2.1.4.min.js"></script> 
+    <script src="JS/moment.min.js"></script>
+    <script src="JS/fullcalendar.min.js"></script>
+    <script src="JS/calendar.js"></script>
+    <script src="JS/jquery-ui.min.js"></script>
+    <script src="JS/toastr.min.js"></script>
+    
+</head>
+
+<body>
+    
+    <!--Modal Dialogs -->
+    <div class="classmodal">
+        <p>Class</p>
+        <form>
+            <label>Class Name:</label><input type="text" id="className"><br>
+            <label>Start Time:</label><input type="text" id="classStart" placeholder="HH:mm (24 hour format)"><br>
+            <label>End Time:</label><input type="text" id="classEnd" placeholder="HH:mm (24 hour format)"><br>
+            <ul class="checkboxgrid">
+                <input type="checkbox" name="classWeek" value="Monday">Monday
+                <input type="checkbox" name="classWeek" value="Tuesday">Tuesday
+                <input type="checkbox" name="classWeek" value="Wednesday">Wednesday
+                <input type="checkbox" name="classWeek" value="Thursday">Thursday
+                <input type="checkbox" name="classWeek" value="Friday">Friday
+                <input type="checkbox" name="classWeek" value="Saturday">Saturday
+                <input type="checkbox" name="classWeek" value="Sunday">Sunday<br>
+            </ul>
+            <label>Priority</label><br><input type="range" id="classPri" id="priority" value="0" step="0.5" min="0" max="5">
+        </form>
+    </div>
+    
+    <div class="goalmodal">
+        <p>Goal</p>
+        <form>
+            <label>Goal Name:</label><input type="text" id="goalName"><br>
+            <label>Priority</label><input type="range" id="goalPri" value="0" step="0.5" min="0" max="5" onchange="onRangeChanged(this.value);"><br>
+        </form>
+    </div>
+    
+    <div class="eventmodal">
+        <p>Event</p>
+        <form>
+            <label>Event Name:</label><input type="text" id="eventName" placeholder="Name"><br>
+            <label>Start Time:</label><input type="text" id="eventStart" placeholder="HH:mm (24 hour format)"><br>
+            <label>End Time:</label><input type="text" id="eventEnd" placeholder="HH:mm (24 hour format)"><br>
+            <label>Date:</label><input type="text" id="eventDay" placeholder="YYYY-MM-DD"><br>
+        </form>
+    </div>
+    
+    <!-- End Modals -->
+    
+    <div id = "topbar">
+        <div id = "left">
+            <span id="username">Username</span>
+        </div>
+        <div id = "right">
+            <a href="#" class="link" id="classlink">Add Class</a>
+            <a href="#" class="link" id="goallink">Add Goal</a>
+            <a href="#" class="link" id="eventlink">Add Event</a>
+        </div>
+    </div>  
+    
+    <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+    </div>
+    
+    <div id = "calendar"></div>
+
+    <div id="title"></div>
+    <div id="dayinfo">         
+        <span id="weather">
+            <h3>High: 37F, Low: 0F, Clear</h3>
+        </span>
+        
+        <div id="class">
+            <h2>Classes</h2>
+            <div class="classlist"></div>
+        </div>
+        
+        <div id="events">
+            <h2>Events</h2>
+            <div class="eventlist"></div>
+        </div> 
+        
+        <div id="goals">
+            <h2>Goals</h2>
+            <div class="goallist"></div>
+        </div>
+    </div>
+    
+    <div id = "footer">
+        <span>&copy; Cameron Spencer, Roger White, Nischaal Cooray</span>
+    </div>
+</body>
+    
+</html>
