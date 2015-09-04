@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/prev"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="previous" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="next" />
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/viewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/day1Layout"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:id="@+id/day1pic"
+                android:layout_below="@+id/day1Title"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Day"
+                android:id="@+id/day1Title"
+                android:textSize="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Next Class"
+                android:id="@+id/day1NextClass"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="45dp"
+                android:textSize="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="High"
+                android:id="@+id/day1High"
+                android:textSize="25dp"
+                android:layout_above="@+id/day1Low"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Low"
+                android:id="@+id/day1Low"
+                android:textSize="25dp"
+                android:layout_above="@+id/day1Condition"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Condition"
+                android:id="@+id/day1Condition"
+                android:textSize="25dp"
+                android:layout_above="@+id/day1NextClass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/day2Layout"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:id="@+id/day2pic"
+                android:layout_below="@+id/day2Title"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Class Day"
+                android:id="@+id/day2Title"
+                android:textSize="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Next Class"
+                android:id="@+id/day2NextClass"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="42dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="High"
+                android:id="@+id/day2High"
+                android:textSize="25dp"
+                android:layout_above="@+id/day2Low"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Low"
+                android:id="@+id/day2Low"
+                android:textSize="25dp"
+                android:layout_above="@+id/day2Condition"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Condition"
+                android:id="@+id/day2Condition"
+                android:textSize="25dp"
+                android:layout_above="@+id/day2NextClass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/day3Layout"
+
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:id="@+id/day3pic"
+                android:layout_below="@+id/day3Title"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Class Day"
+                android:id="@+id/day3Title"
+                android:textSize="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Next Class"
+                android:id="@+id/day3NextClass"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="42dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="25dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="High"
+                android:id="@+id/day3High"
+                android:textSize="25dp"
+                android:layout_above="@+id/day3Low"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Low"
+                android:id="@+id/day3Low"
+                android:textSize="25dp"
+                android:layout_above="@+id/day3Condition"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Condition"
+                android:id="@+id/day3Condition"
+                android:textSize="25dp"
+                android:layout_above="@+id/day3NextClass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/day4Layout"
+
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:id="@+id/day4pic"
+                android:layout_below="@+id/day4Title"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Class Day"
+                android:id="@+id/day4Title"
+                android:textSize="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Next Class"
+                android:id="@+id/day4NextClass"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="42dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="25dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="High"
+                android:id="@+id/day4High"
+                android:textSize="25dp"
+                android:layout_above="@+id/day4Low"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Low"
+                android:id="@+id/day4Low"
+                android:textSize="25dp"
+                android:layout_above="@+id/day4Condition"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Condition"
+                android:id="@+id/day4Condition"
+                android:textSize="25dp"
+                android:layout_above="@+id/day4NextClass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/day5Layout"
+
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:id="@+id/day5pic"
+                android:layout_below="@+id/day5Title"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Class Day"
+                android:id="@+id/day5Title"
+                android:textSize="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Next Class"
+                android:id="@+id/day5NextClass"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="42dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="25dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="High"
+                android:id="@+id/day5High"
+                android:textSize="25dp"
+                android:layout_above="@+id/day5Low"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Low"
+                android:id="@+id/day5Low"
+                android:textSize="25dp"
+                android:layout_above="@+id/day5Condition"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Condition"
+                android:id="@+id/day5Condition"
+                android:textSize="25dp"
+                android:layout_above="@+id/day5NextClass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/day6Layout"
+
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:id="@+id/day6pic"
+                android:layout_below="@+id/day6Title"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Class Day"
+                android:id="@+id/day6Title"
+                android:textSize="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Next Class"
+                android:id="@+id/day6NextClass"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="42dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="25dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="High"
+                android:id="@+id/day6High"
+                android:textSize="25dp"
+                android:layout_above="@+id/day6Low"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Low"
+                android:id="@+id/day6Low"
+                android:textSize="25dp"
+                android:layout_above="@+id/day6Condition"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Condition"
+                android:id="@+id/day6Condition"
+                android:textSize="25dp"
+                android:layout_above="@+id/day6NextClass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/day7Layout"
+
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:id="@+id/day7pic"
+                android:layout_below="@+id/day7Title"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Class Day"
+                android:id="@+id/day7Title"
+                android:textSize="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Next Class"
+                android:id="@+id/day7NextClass"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="42dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="25dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="High"
+                android:id="@+id/day7High"
+                android:textSize="25dp"
+                android:layout_above="@+id/day7Low"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Low"
+                android:id="@+id/day7Low"
+                android:textSize="25dp"
+                android:layout_above="@+id/day7Condition"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Condition"
+                android:id="@+id/day7Condition"
+                android:textSize="25dp"
+                android:layout_above="@+id/day7NextClass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+
+    </ViewFlipper>
+
+</LinearLayout>

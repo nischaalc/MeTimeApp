@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Class"
+            android:id="@+id/btnAddClassSwipe"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.40" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Event"
+            android:id="@+id/btnAddEventSwipe"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.40" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Goal"
+            android:id="@+id/btnAddGoalSwipe"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.40" />
+    </LinearLayout>
+
+
+    <ViewFlipper
+        android:id="@+id/addItemViewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true">
+
+        <!--
+        *******************************************************************************
+        ************************ADD CLASS FRAGMENT*************************************
+        ****************************************************************************-->
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:id="@+id/addClassLayout">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtClassName"
+                android:layout_weight="1"
+                android:hint="Class Name:"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/txtStartClass"
+                android:hint="Start Time (24-hrs)"
+                android:layout_below="@+id/txtClassName"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/txtEndClass"
+                android:hint="End Time (24-hrs)"
+                android:layout_below="@+id/txtClassName"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="45dp" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/classRatingBar"
+                android:layout_below="@+id/txtEndClass"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Class"
+                android:id="@+id/btnAddClass"
+                android:layout_below="@+id/classRatingBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday"
+                android:id="@+id/cbMondayClass"
+                android:checked="false"
+                android:layout_above="@+id/txtEndClass"
+                android:layout_alignStart="@+id/cbTuesdayClass" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tuesday"
+                android:id="@+id/cbTuesdayClass"
+                android:checked="false"
+                android:layout_below="@+id/cbMondayClass"
+                android:layout_alignStart="@+id/cbWednesdayClass" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wednesday"
+                android:id="@+id/cbWednesdayClass"
+                android:checked="false"
+                android:layout_below="@+id/cbTuesdayClass"
+                android:layout_alignParentEnd="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thursday"
+                android:id="@+id/cbThursdayClass"
+                android:checked="false"
+                android:layout_below="@+id/cbWednesdayClass"
+                android:layout_alignStart="@+id/cbMondayClass" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday"
+                android:id="@+id/cbFridayClass"
+                android:checked="false"
+                android:layout_below="@+id/cbThursdayClass"
+                android:layout_alignStart="@+id/cbThursdayClass" />
+
+        </RelativeLayout>
+
+        <!--
+        *******************************************************************************
+        ************************ADD EVENT FRAGMENT*************************************
+        ****************************************************************************-->
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/addEventLayout">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtEventName"
+                android:layout_weight="1"
+                android:hint="Event Name:"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/txtStartEvent"
+                android:hint="Start Time (24-hrs)"
+                android:layout_below="@+id/txtEventName"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/txtEndEvent"
+                android:hint="End Time (24-hrs)"
+                android:layout_below="@+id/txtStartEvent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventRatingBar"
+                android:layout_below="@+id/txtEventLocation"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Event"
+                android:id="@+id/btnAddEvent"
+                android:layout_below="@+id/eventRatingBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtEventLocation"
+                android:hint="Address"
+                android:layout_below="@+id/editText"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event is Outside"
+                android:id="@+id/cbEventOutside"
+                android:checked="false"
+                android:layout_alignTop="@+id/eventRatingBar"
+                android:layout_toEndOf="@+id/eventRatingBar" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_below="@+id/txtEndEvent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:hint="Day (YYYY-MM-DD)" />
+
+        </RelativeLayout>
+
+        <!--
+        *******************************************************************************
+        ************************ADD GOAL FRAGMENT**************************************
+        ****************************************************************************-->
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/addGoalLayout">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtGoalName"
+                android:layout_weight="1"
+                android:hint="Goal Name:"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goalRatingBar"
+                android:layout_below="@+id/txtGoalName"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Class"
+                android:id="@+id/btnAddGoal"
+                android:layout_below="@+id/goalRatingBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+
+    </ViewFlipper>
+
+
+</RelativeLayout>

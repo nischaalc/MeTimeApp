@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/newClassLayout">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNewClassName"
+        android:layout_weight="1"
+        android:hint="Class Name:"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/txtNewStartClass"
+        android:hint="Start Time"
+        android:layout_below="@+id/txtNewClassName"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/txtNewEndClass"
+        android:hint="End Time"
+        android:layout_below="@+id/txtNewClassName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newClassRatingBar"
+        android:layout_below="@+id/txtNewEndClass"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Class"
+        android:id="@+id/btnNewAddClass"
+        android:layout_below="@+id/newClassRatingBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:id="@+id/cbNewMondayClass"
+        android:checked="false"
+        android:layout_above="@+id/txtNewEndClass"
+        android:layout_alignStart="@+id/cbNewTuesdayClass" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday"
+        android:id="@+id/cbNewTuesdayClass"
+        android:checked="false"
+        android:layout_below="@+id/cbNewMondayClass"
+        android:layout_alignStart="@+id/cbNewWednesdayClass" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        android:id="@+id/cbNewWednesdayClass"
+        android:checked="false"
+        android:layout_below="@+id/cbNewTuesdayClass"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday"
+        android:id="@+id/cbNewThursdayClass"
+        android:checked="false"
+        android:layout_below="@+id/cbNewWednesdayClass"
+        android:layout_alignStart="@+id/cbNewMondayClass" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        android:id="@+id/cbNewFridayClass"
+        android:checked="false"
+        android:layout_below="@+id/cbNewThursdayClass"
+        android:layout_alignStart="@+id/cbNewThursdayClass" />
+
+</RelativeLayout>
