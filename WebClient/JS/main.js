@@ -1,5 +1,6 @@
 function onSuccess(googleUser) {
     "use strict";
+    console.log(googleUser);
     window.localStorage.setItem("googleUser.object", googleUser.Ka.access_token);
     window.location.href = "http://nischaalc.github.io/MeTime/users?name=" + googleUser.getBasicProfile().getName();
 }
